@@ -20243,6 +20243,8 @@
 	        _this.color = Media.colors.red;
 	        _this.transition = true;
 	        _this.stack = 1;
+
+	        _this.type = "Monster";
 	        return _this;
 	    }
 
@@ -20441,38 +20443,25 @@
 
 	"use strict";
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var ID = __webpack_require__(183);
 
-	var Entity = function () {
-	    function Entity() {
-	        var entity = arguments.length <= 0 || arguments[0] === undefined ? new Object() : arguments[0];
+	var Entity = function Entity() {
+	    var entity = arguments.length <= 0 || arguments[0] === undefined ? new Object() : arguments[0];
 
-	        _classCallCheck(this, Entity);
+	    _classCallCheck(this, Entity);
 
-	        this.id = entity.id || ID.generate();
-	        this.game = entity.game || undefined;
+	    this.id = entity.id || ID.generate();
+	    this.game = entity.game || undefined;
 
-	        entity.position = entity.position || {};
-	        this.position = {};
-	        this.position.x = entity.position.x || 0;
-	        this.position.y = entity.position.y || 0;
-	        this.width = entity.width || 1;
-	        this.height = entity.height || 1;
-	    }
-
-	    _createClass(Entity, [{
-	        key: "type",
-	        get: function get() {
-	            return this.constructor.name;
-	        }
-	    }]);
-
-	    return Entity;
-	}();
+	    entity.position = entity.position || {};
+	    this.position = {};
+	    this.position.x = entity.position.x || 0;
+	    this.position.y = entity.position.y || 0;
+	    this.width = entity.width || 1;
+	    this.height = entity.height || 1;
+	};
 
 	module.exports = Entity;
 
@@ -20985,6 +20974,8 @@
 	        _this.color = Media.colors.yellow;
 	        _this.transition = true;
 	        _this.stack = 2;
+
+	        _this.type = "Adventurer";
 	        return _this;
 	    }
 
